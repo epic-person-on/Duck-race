@@ -1,19 +1,21 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator thingy</title>
+    <title>Unique Random Number</title>
 </head>
 <body>
-    <h1>Duck Race</h1>
-    <form id="emailForm">
-        <label for="gmail">Enter your Gmail:</label>
-        <input type="email" id="gmail" required>
-        <button type="submit">Submit</button>
-    </form>
-    <h2>Your Random Number:</h2>
-    <div id="randomNumber"></div>
-    <script src="main.js"></script>
+    <h1>Your Unique Random Number:</h1>
+    <p id="randomNumber">Loading...</p>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.0/uuid.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
+
