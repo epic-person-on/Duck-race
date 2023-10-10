@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(user => {
 });
 // index.js
 // Generate a unique random number for the user.
-const uniqueRandomNumber = uuidv4();
+const uniqueRandomNumber = Math.floor(Math.random() * 1000000);
 
 // Store the Gmail address and random number in Firebase Storage as a JSON file.
 const storageRef = firebase.storage().ref();
