@@ -1,27 +1,27 @@
 <h1>Testing</h1>
 <script>
-  const spreadsheetId = '2PACX-1vQzdapkrZoENDJWHZsLhdv8qV0metCNAj02ZuRbBN021pzOTF4a9KNiTsvrLdhYVp9CSCG-saCAVBCH';
-const googleSheetsUrl = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/pub?output=csv`;
+  const googleSheetsUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzdapkrZoENDJWHZsLhdv8qV0metCNAj02ZuRbBN021pzOTF4a9KNiTsvrLdhYVp9CSCG-saCAVBCH/pub?output=csv';
 
-fetch(googleSheetsUrl)
-  .then(response => {
-    // Log the response to the console
-    console.log('Response:', response);
-
-    // Check if the response status is OK (status code 200)
-    if (response.ok) {
-      return response.text(); // If the response is OK, convert it to text
-    } else {
-      throw new Error('Network response was not ok');
-    }
-  })
-  .then(data => {
-    // Process and display the data on your GitHub site
-    console.log('Data:', data); // Log the data to the console
-  })
-  .catch(error => {
-    console.error('Fetch error:', error); // Log any errors to the console
-  });
+  fetch(googleSheetsUrl)
+    .then(response => {
+      // Log the response to the console
+      console.log('Response:', response);
+  
+      // Check if the response status is OK (status code 200)
+      if (response.ok) {
+        return response.text(); // If the response is OK, convert it to text
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .then(data => {
+      // Process and display the data on your GitHub site
+      console.log('Data:', data); // Log the data to the console
+      // You can parse and process the CSV data here as needed
+    })
+    .catch(error => {
+      console.error('Fetch error:', error); // Log any errors to the console
+    });
 
 
 </script>
