@@ -1,1 +1,11 @@
-<h1>testing<h1>
+<script>
+  fetch('https://docs.google.com/spreadsheets/d/1P0TCTu3rqSxXfMXAUHLpGGXbbrHvXE305Z_eGPmUMao/edit?usp=sharing')
+    .then(response => response.json())
+    .then(data => {
+      // Process the data from Google Sheets here
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+</script>
