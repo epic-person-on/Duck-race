@@ -1,18 +1,9 @@
 <h1>Testing</h1>
 <script>
-  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQzdapkrZoENDJWHZsLhdv8qV0metCNAj02ZuRbBN021pzOTF4a9KNiTsvrLdhYVp9CSCG-saCAVBCH/pubhtml')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json(); // Parse the response as JSON
-  })
+  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQzdapkrZoENDJWHZsLhdv8qV0metCNAj02ZuRbBN021pzOTF4a9KNiTsvrLdhYVp9CSCG-saCAVBCH/pub?output=csv')
+  .then(response => response.text())
   .then(data => {
-    // Process the data from Google Sheets here
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
+    console.log(response)
   });
 
 </script>
