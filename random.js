@@ -1,16 +1,18 @@
-// Initialize Firebase with your project's configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyArg0NFirv13y0uJaosaqfsMt8Su_inmsQ",
-  authDomain: "duck-a701a.firebaseapp.com",
-  projectId: "duck-a701a",
-  storageBucket: "duck-a701a.appspot.com",
-  messagingSenderId: "365384333064",
-  appId: "1:365384333064:web:2329438a5333f4b2f41ebd",
-};
-
-firebase.initializeApp(firebaseConfig);
-
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Firebase with your project's configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyArg0NFirv13y0uJaosaqfsMt8Su_inmsQ",
+      authDomain: "duck-a701a.firebaseapp.com",
+      projectId: "duck-a701a",
+      storageBucket: "duck-a701a.appspot.com",
+      messagingSenderId: "365384333064",
+      appId: "1:365384333064:web:2329438a5333f4b2f41ebd",
+      measurementId: "G-P7KJ1NX2CH"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
     // Generate a unique random number and display it to the user
     const uniqueRandomNumber = generateUniqueRandomNumber();
     document.getElementById('randomNumber').textContent = uniqueRandomNumber;
@@ -44,3 +46,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
